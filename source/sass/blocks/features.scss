@@ -1,0 +1,17 @@
+.features {
+  padding: 80px 0;
+  max-width: $desktop-width;
+  margin: 0 auto;
+}
+
+.features__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.features__item {
+  width: 50%;
+  min-height: 85px;
+}

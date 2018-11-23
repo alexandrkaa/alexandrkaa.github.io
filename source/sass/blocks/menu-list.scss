@@ -3,6 +3,7 @@
   max-width: $desktop-width;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   background-color: $cl-white;
 }
 
@@ -11,4 +12,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 35px;
+  background-color: $cl-white;
+
+  &--active {
+    background-color: $cl-red;
+
+    .menu-list__link {
+      color: $cl-white;
+
+      &:hover {
+        color: transparentize($cl-white, 0.3);
+      }
+
+      &:focus,
+      &:active {
+        color: invert($cl-red);
+      }
+    }
+  }
+}
+
+.menu-list__link {
+  color: $cl-red;
+  text-decoration: underline;
+
+  &:hover {
+    color: lighten($cl-red, 30%);
+  }
+
+  &:focus,
+  &:active {
+    color: invert($cl-red);
+  }
 }

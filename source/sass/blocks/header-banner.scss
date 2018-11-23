@@ -1,0 +1,21 @@
+.header-banner {
+  color: $cl-grey;
+  font-size: 22px;
+  line-height: 28px;
+  font-family: "Lora", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+}
+
+.header-banner__wrapper {
+  max-width: $desktop-width;
+  margin: 0 auto;
+}
+
+.header-banner__promo-text {
+  max-width: 665px;
+  padding: 0 15px;
+}
+
+.header-banner__logo {
+  margin-left: 15px;
+  margin-bottom: 55px;
+}

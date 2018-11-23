@@ -1,0 +1,23 @@
+.header-contacts {
+  background-color: transparent;
+  background-image: linear-gradient(to right, transparent, transparent 30%, $cl-blue-menu 30%, $cl-blue-menu);
+}
+
+.header-contacts__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: $desktop-width;
+  margin: 0 auto;
+  background-color: $cl-blue-menu;
+  transform: translateX(15px);
+}
+
+.header-contacts__contact {
+  min-height: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+}
