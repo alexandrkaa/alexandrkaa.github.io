@@ -1,8 +1,22 @@
-$tablet-width: 414px;
+$mobile-width: 414px;
 $tablet-width: 768px;
 $desktop-width: 1140px;
+
+$cl-grey: #4c4c4c;
+$cl-white: #ffffff;
+$cl-red: #c04e1a;
+$cl-blue: #2e8ed8;
+$cl-blue-light: #86c7ff;
+$cl-blue-dark: #164cc1;
+$cl-blue-menu: #2f7dca;
+$cl-blue-footer: #2e73b7;
 
 @import "normalize";
 @import "mixin.scss";
 @import "fonts.scss";
 @import "global.scss";
+@import "blocks/visually-hidden.scss";
+@import "blocks/footer-main.scss";
+@import "blocks/header-main.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/menu-list.scss";
