@@ -17,7 +17,7 @@
       </div> -->
       <h1 class="visually-hidden">Юридическая компания ПарадоксПрава</h1>
       <header class="header-main">
-        <section class="header-banner">
+        <div class="header-banner">
           <div class="header-banner__wrapper">
             <picture>
               <!-- <source type="image/webp" media="(max-width: 659px)" srcset="img/iphone-screen-mobile@1x.webp 1x, img/iphone-screen-mobile@2x.webp 2x">
@@ -26,11 +26,11 @@
               <source media="(max-width: 659px)" srcset="img/iphone-screen-mobile@1x.png 1x, img/iphone-screen-mobile@2x.png 2x">
               <source media="(max-width: 959px)" srcset="img/iphone-screen-1-tablet@1x.png 1x, img/iphone-screen-1-tablet@2x.png 2x">
               <source media="(min-width: 960px)" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x"> -->
-              <img class="header-banner__logo logo" src="img/logo.jpg" srcset="" width="350" height="90" alt="Логотип ПарадоксПрава">
+              <img class="header-banner__logo logo" src="img/logo.png" width="350" height="90" alt="Логотип ПарадоксПрава"><!--srcset=""-->
             </picture>
             <p class="header-banner__promo-text">Вступительный текст. Судебное решение субъективно страхует причиненный ущерб, даже с учетом публичного характера данных правоотношений. Товарный кредит принципиально доказывает юридический платежный документ.</p>
           </div>
-        </section>
+        </div>
         <nav class="header-main__main-nav main-nav">
           <ul class="main-nav__list menu-list">
             <li class="menu-list__item menu-list__item--active"><a class="menu-list__link" href="">Главная</a></li>
@@ -41,6 +41,7 @@
           </ul>
         </nav>
         <section class="header-contacts">
+          <h2 class="visually-hidden">Контакты</h2>
           <ul class="header-contacts__list">
             <li class="header-contacts__contact header-contacts__contact--phone">
               <a href="tel:+74991361551">+7 (499) 136-15-51</a>
@@ -61,12 +62,12 @@
         <section class="features">
           <h2 class="visually-hidden">Наши преимущества</h2>
           <ul class="features__list">
-            <li class="features__item feature">Консультации по всем юридическим вопросам</li>
-            <li class="features__item feature">Правовой анализ ситуациии документов</li>
-            <li class="features__item feature">Представительство в судах и других государственных органах</li>
-            <li class="features__item feature">Проведение переговоровв спорных ситуациях</li>
-            <li class="features__item feature">Досудебное урегулирование</li>
-            <li class="features__item feature">Подготовка документов</li>
+            <li class="features__item feature feature--consult">Консультации по всем юридическим вопросам</li>
+            <li class="features__item feature feature--analiz">Правовой анализ ситуации документов</li>
+            <li class="features__item feature feature--representation">Представительство в судах и других государственных органах</li>
+            <li class="features__item feature feature--talk">Проведение переговоров в спорных ситуациях</li>
+            <li class="features__item feature feature--pretrial">Досудебное урегулирование</li>
+            <li class="features__item feature feature--docs">Подготовка документов</li>
           </ul>
         </section>
         <section class="services">
@@ -125,14 +126,15 @@
           </div>
         </section>
         <section class="prices">
+          <h2 class="visually-hidden">Цены на услуги</h2>
           <ul class="prices__list">
             <li class="prices__card price">
-              <p class="price__lead">Первичная консультацияпо телефону</p>
+              <p class="price__lead">Первичная консультация по телефону</p>
               <p class="price__value">Бесплатно</p>
             </li>
             <li class="prices__card price">
-              <p class="price__lead">Очная подробная консультация без ограничения по вопросам и времени</p>
-              <p class="price__value">от 2 000 ₽ до 3 500 ₽</p>
+              <p class="price__lead">Очная подробная консультация без ограничений по вопросам и времени</p>
+              <p class="price__value">от 2 000 ₽ до 3 500 ₽</p>
             </li>
             <li class="prices__card price">
               <p class="price__lead">Подготовка документов</p>
@@ -146,7 +148,7 @@
         </section>
       </main>
       <footer class="footer-main">
-        <small>&copy 2018 ПарадоксПрава</small>
+        <small>&copy; 2018 ПарадоксПрава</small>
       </footer>
       <script src="js/app.min.js"></script>
     </body>

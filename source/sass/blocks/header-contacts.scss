@@ -20,4 +20,34 @@
   justify-content: flex-start;
   align-items: center;
   padding-left: 20px;
+
+  &--phone:first-of-type {
+    padding-left: 50px;
+    background: $cl-blue-menu url("../img/phone.png") no-repeat left 10px center;
+  }
+
+  &--email {
+    padding-left: 45px;
+    background: $cl-blue-menu url("../img/mail.png") no-repeat left 10px center;
+  }
+
+  a {
+    color: $cl-white;
+    text-decoration: underline;
+    font-size: 16px;
+    line-height: 24px;
+
+    &:visited {
+      color: $cl-white;
+    }
+
+    &:hover {
+      color: transparentize($cl-white, 0.3);
+    }
+
+    &:active,
+    &:focus {
+      color: invert($cl-red);
+    }
+  }
 }

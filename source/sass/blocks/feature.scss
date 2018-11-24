@@ -5,4 +5,35 @@
   font-size: 26px;
   line-height: 34px;
   font-family: "Lora", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+  background-color: $cl-white;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 90px 90px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.feature--consult {
+  background-image: url("../img/icon-consult.svg");
+}
+
+.feature--analiz {
+  background-image: url("../img/icon-analiz.svg");
+}
+
+.feature--docs {
+  background-image: url("../img/icon-docs.svg");
+}
+
+.feature--representation {
+  background-image: url("../img/icon-representation.svg");
+}
+
+.feature--talk {
+  background-image: url("../img/icon-talk.svg");
+}
+
+.feature--pretrial {
+  background-image: url("../img/icon-pretrial.svg");
 }
