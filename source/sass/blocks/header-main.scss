@@ -1,9 +1,10 @@
 .header-main {
-  background-color: $cl-blue;
-  background-image: url("../img/pravoslava1.png"), url("../img/top-lines.svg"), url("../img/menu-lines@1x.png"), url("../img/star_1.png"), linear-gradient(135deg, $cl-blue, $cl-blue-light);
+  background-color: $cl-white;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-  background-position: left 70% top 90px, center top, left calc(50% + 100px) top 430px, left 75% top 40px, center center;
-  background-size: auto, 130%, auto, 645px, auto;
+  background-image: url("../img/pravoslava1.png"), url("../img/top-lines@1x.png"), url("../img/menu-lines@1x.png"), url("../img/starandbg.jpg");
+  background-size: auto, 100%, auto, cover, auto;
+  background-position: left 70% top 90px, center top, left calc(50% + 100px) top 430px, top center;
+
   color: $cl-white;
   min-height: 550px;
   padding: 0;
@@ -13,33 +14,19 @@
   flex-direction: column;
   position: relative;
 
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border: 25px solid transparent;
-    border-left: 50vw solid $cl-white;
-    border-right: 50vw solid $cl-white;
-    border-bottom: 0 solid $cl-white;
-  }
-
-  @media (max-width: 1600px) {
-    background-image: url("../img/pravoslava1.png"), url("../img/top-lines@1x.png"), url("../img/menu-lines@1x.png"), url("../img/star@1x.png"), linear-gradient(135deg, $cl-blue, $cl-blue-light);
-    background-size: auto, 100%, auto, 645px, auto;
-    //background-position: center top;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/pravoslava1.png"), url("../img/top-lines@2x.png"), url("../img/menu-lines@1x.png"), url("../img/star@2x.png"), linear-gradient(135deg, $cl-blue, $cl-blue-light);
-    }
-  }
-
   @media (max-width: 2560px) {
-    background-image: url("../img/pravoslava1.png"), url("../img/top-lines@2x.png"), url("../img/menu-lines@1x.png"), url("../img/star@1x.png"), linear-gradient(135deg, $cl-blue, $cl-blue-light);
-    background-size: auto, 100%, auto, 645px, auto;
-    //background-position: center top;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      width: 0;
+      height: 0;
+      border: 25px solid transparent;
+      border-left: 50vw solid $cl-white;
+      border-right: 50vw solid $cl-white;
+      border-bottom: 0 solid $cl-white;
+    }
   }
 }
 

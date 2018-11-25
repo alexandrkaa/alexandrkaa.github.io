@@ -5,35 +5,63 @@
   font-size: 26px;
   line-height: 34px;
   font-family: "Lora", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
-  background-color: $cl-white;
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-size: 90px 90px;
   min-height: 100px;
   display: flex;
   align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $cl-white;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 }
 
 .feature--consult {
-  background-image: url("../img/icon-consult.svg");
+  &::before {
+    background-image: url("../img/icon-consult.svg");
+    background-size: 83px auto;
+  }
 }
 
 .feature--analiz {
-  background-image: url("../img/icon-analiz.svg");
+  &::before {
+    background-image: url("../img/icon-analiz.svg");
+    background-size: 73px auto;
+  }
 }
 
 .feature--docs {
-  background-image: url("../img/icon-docs.svg");
+  &::before {
+    background-image: url("../img/icon-docs.svg");
+    background-size: 70px auto;
+  }
 }
 
 .feature--representation {
-  background-image: url("../img/icon-representation.svg");
+  &::before {
+    background-image: url("../img/icon-representation.svg");
+    background-size: 83px auto;
+  }
 }
 
 .feature--talk {
-  background-image: url("../img/icon-talk.svg");
+  &::before {
+    background-image: url("../img/icon-talk.svg");
+    background-size: 78px auto;
+  }
 }
 
 .feature--pretrial {
-  background-image: url("../img/icon-pretrial.svg");
+  &::before {
+    background-image: url("../img/icon-pretrial.svg");
+    background-size: 75px auto;
+  }
 }

@@ -15,7 +15,7 @@
     width: 58px;
     height: 27px;
     left: 15px;
-    top: 0;
+    top: -1px;
     background: transparent url("../img/services-elipse.svg") no-repeat center center;
   }
 }
@@ -38,6 +38,7 @@
 
 .services__service {
   width: 33.3333%;
+  margin-top: 30px;
   min-height: 50px;
   box-sizing: border-box;
   padding: 0 15px;
@@ -45,6 +46,196 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &--family {
+    &::before {
+      background-image: url("../img/family_1309532@1x.png");
+      background-size: 35px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/family_1309532@2x.png");
+      }
+    }
+  }
+
+  &--credit {
+    &::before {
+      background-image: url("../img/bank_1902525@1x.png");
+      background-size: 30px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/bank_1902525@2x.png");
+      }
+    }
+  }
+
+  &--oldman {
+    &::before {
+      background-image: url("../img/old-man_1618897@1x.png");
+      background-size: 28px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/old-man_1618897@2x.png");
+      }
+    }
+  }
+
+  &--loan {
+    &::before {
+      background-image: url("../img/loan_1324793@1x.png");
+      background-size: 35px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/loan_1324793@2x.png");
+      }
+    }
+  }
+
+  &--lawhammer {
+    &::before {
+      background-image: url("../img/law-hammer_1826832@1x.png");
+      background-size: 31px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/law-hammer_1826832@2x.png");
+      }
+    }
+  }
+
+  &--consumer-protection {
+    &::before {
+      background-image: url("../img/shopping-cart_465048@1x.png");
+      background-size: 24px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/shopping-cart_465048@2x.png");
+      }
+    }
+  }
+
+  &--hereditary-disputes {
+    &::before {
+      background-image: url("../img/ribbon_55189@1x.png");
+      background-size: 35px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/ribbon_55189@2x.png");
+      }
+    }
+  }
+
+  &--millitary-disputes {
+    &::before {
+      background-image: url("../img/tank_1291268@1x.png");
+      background-size: 30px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/tank_1291268@2x.png");
+      }
+    }
+  }
+
+  &--insurance {
+    &::before {
+      background-image: url("../img/umbrella_1008091@1x.png");
+      background-size: 28px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/umbrella_1008091@2x.png");
+      }
+    }
+  }
+
+  &--labor-disputes {
+    &::before {
+      background-image: url("../img/spanner_1721315@1x.png");
+      background-size: 35px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/spanner_1721315@2x.png");
+      }
+    }
+  }
+
+  &--honor-protection {
+    &::before {
+      background-image: url("../img/lion_549920@1x.png");
+      background-size: 24px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/lion_549920@2x.png");
+      }
+    }
+  }
+
+  &--real-estate-disputes {
+    &::before {
+      background-image: url("../img/window_655725@1x.png");
+      background-size: 23px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/window_655725@2x.png");
+      }
+    }
+  }
+
+  &--earth {
+    &::before {
+      background-image: url("../img/earth_1916540@1x.png");
+      background-size: 25px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/earth_1916540@2x.png");
+      }
+    }
+  }
+
+  &--developer-disputes {
+    &::before {
+      background-image: url("../img/crane_1065551@1x.png");
+      background-size: 28px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/crane_1065551@1x.png");
+      }
+    }
+  }
+
+  &--real-estate-deals {
+    &::before {
+      background-image: url("../img/house_2038614@1x.png");
+      background-size: 28px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/house_2038614@2x.png");
+      }
+    }
+  }
+
+  &--arbitration-disputes {
+    &::before {
+      background-image: url("../img/case_650254@1x.png");
+      background-size: 28px auto;
+
+      @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/case_650254@2x.png");
+      }
+    }
+  }
 }
 
 .services__service-link {
@@ -63,6 +254,6 @@
 
   &:active,
   &:focus {
-    color: $cl-red;
+    color: $cl-blue-dark;
   }
 }

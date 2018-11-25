@@ -14,26 +14,12 @@
 
 .prices__card {
   width: calc(33.3333% - 30px);
-  background-color: $cl-white;
-  min-height: 333px;
-  box-sizing: border-box;
   margin: 0 15px;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-  }
 }
 
 .prices__card--big {
   width: 100%;
   margin: 0 15px;
   margin-bottom: 35px;
-  min-height: 155px;
   margin-top: 20px;
-  padding-left: 95px;
-  background: $cl-white url("../img/price-card-triangle.svg") no-repeat left center;
 }
