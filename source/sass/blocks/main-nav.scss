@@ -31,9 +31,16 @@
     justify-content: flex-start;
     align-items: flex-start;
     background: $cl-white;
+
+    // &--js {
+    //   flex-direction: row;
+    //   justify-content: flex-end;
+    // }
   }
 
   .main-nav--closed {
+    background-color: $cl-white;
+
     .main-nav__list {
       transform: scaleY(0);
       transition: all 0.5s ease-in-out;
@@ -44,6 +51,8 @@
   }
 
   .main-nav--opened {
+    background: none;
+
     .main-nav__list {
       transform: scaleY(1);
       max-height: 9999px;
@@ -95,5 +104,13 @@
 @media (max-width: $tablet-width) {
   .main-nav {
     background: none;
+
+    &--closed {
+      background-color: $cl-white;
+    }
+
+    &--opened {
+      background: none;
+    }
   }
 }

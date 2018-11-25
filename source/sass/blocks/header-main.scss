@@ -38,6 +38,11 @@
   margin-top: auto;
 }
 
+// .header-main__menu-label {
+//   display: none;
+//   color: $cl-grey;
+// }
+
 @media (max-width: $desktop-width) {
   .header-main {
     background-position: right 0 top 70px, center top, left calc(50% + 100px) top 430px, top center;
@@ -49,11 +54,19 @@
   .header-main__main-nav {
     margin-top: 105px;
   }
+
+  // .header-main__menu-label {
+  //   display: inline;
+  // }
 }
 
 @media (max-width: 900px) {
   .header-main__main-nav {
     margin-top: 90px;
+  }
+
+  .header-main__menu-label {
+    display: inline;
   }
 }
 
@@ -69,4 +82,8 @@
   .header-main__main-nav {
     margin-top: 0;
   }
+
+  // .header-main__menu-label {
+  //   display: inline;
+  // }
 }

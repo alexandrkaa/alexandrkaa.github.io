@@ -109,14 +109,13 @@
     &--courts-representation {
       background-size: auto 105%;
       background-position: left -20px center;
+      text-align: left;
     }
   }
 }
 
 @media (max-width: $tablet-width) {
   .price {
-
-    //// FIXME: disable mobile animations
     &--phone,
     &--full-time,
     &--docs {
@@ -124,12 +123,16 @@
       background-position: center top 10px, center -55px, center top;
     }
 
+    &--full-time {
+      background-size: auto 60px, auto 250px, auto;
+    }
+
     &--courts-representation {
       background-position: left -30px center;
+      text-align: left;
     }
   }
 
-  //// FIXME: disable mobile animations
   .price__value {
     .price--phone &,
     .price--full-time &,
