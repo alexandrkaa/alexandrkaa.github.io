@@ -28,7 +28,7 @@ gulp.task( 'deploy', function () {
     host: 'enut.ru',
     user: ftpcred.login,
     password: ftpcred.password,
-    parallel: 5,
+    parallel: 1,
     log: gutil.log,
   } );
 
@@ -44,7 +44,7 @@ gulp.task( 'deploy', function () {
     // turn off buffering in gulp.src for best performance
 
     return gulp.src( globs, { base: '.', buffer: false } )
-        .pipe( conn.newer( '/www/enut.ru/paradoxprava' ) ) // only upload newer files
+        //.pipe( conn.newer( '/www/enut.ru/paradoxprava' ) ) // only upload newer files
         .pipe( conn.dest( '/www/enut.ru/paradoxprava' ) );
 
 } );

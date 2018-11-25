@@ -115,8 +115,26 @@
 
 @media (max-width: $tablet-width) {
   .price {
+
+    //// FIXME: disable mobile animations
+    &--phone,
+    &--full-time,
+    &--docs {
+      background-size: auto 100px, auto 250px, auto;
+      background-position: center top 10px, center -55px, center top;
+    }
+
     &--courts-representation {
       background-position: left -30px center;
+    }
+  }
+
+  //// FIXME: disable mobile animations
+  .price__value {
+    .price--phone &,
+    .price--full-time &,
+    .price--docs & {
+      transform: rotate(0deg);
     }
   }
 }

@@ -4,7 +4,6 @@
   background-image: url("../img/pravoslava1.png"), url("../img/top-lines@1x.png"), url("../img/menu-lines@1x.png"), url("../img/starandbg.jpg");
   background-size: auto, 100%, auto, cover, auto;
   background-position: left 80% top 90px, center top, left calc(50% + 100px) top 430px, top center;
-  overflow-x: hidden;
   color: $cl-white;
   min-height: 550px;
   padding: 0;
@@ -16,6 +15,7 @@
 
   @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     background-image: url("../img/pravoslava1.png"), url("../img/top-lines@2x.png"), url("../img/menu-lines@2x.png"), url("../img/starandbg.jpg");
+    background-size: auto, 100%, 1600px, cover, auto;
   }
 
   @media (max-width: 2560px) {
@@ -40,7 +40,6 @@
 
 @media (max-width: $desktop-width) {
   .header-main {
-    overflow: visible;
     background-position: right 0 top 70px, center top, left calc(50% + 100px) top 430px, top center;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-image: url("../img/pravoslava1.png"), url("../img/top-lines@1x.png"), url("../img/menu-lines@1x.png"), url("../img/starandbg.jpg");
@@ -60,7 +59,6 @@
 
 @media (max-width: $tablet-width) {
   .header-main {
-    overflow: visible;
     background-position: center top, top center;
     background-repeat: no-repeat, no-repeat;
     background-image: url("../img/top-lines@1x.png"), url("../img/starandbg.jpg");
