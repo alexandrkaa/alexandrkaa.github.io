@@ -257,3 +257,15 @@
     color: $cl-blue-dark;
   }
 }
+
+@media (max-width: $desktop-width) {
+  .services__service {
+    width: 50%;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .services__service {
+    width: 100%;
+  }
+}

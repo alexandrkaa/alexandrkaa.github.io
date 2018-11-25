@@ -103,3 +103,20 @@
     transition: all 0.3s ease-in-out;
   }
 }
+
+@media (max-width: $desktop-width) {
+  .price {
+    &--courts-representation {
+      background-size: auto 105%;
+      background-position: left -20px center;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .price {
+    &--courts-representation {
+      background-position: left -30px center;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 .DS_Store
 .idea
 .vscode
+.ftpcred.json
 *.ai
 *.log
 *.pdf

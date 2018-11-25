@@ -13,5 +13,22 @@
     margin: 0 auto;
     font: inherit;
     padding: 5px 15px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .footer-main {
+    small {
+      min-width: $tablet-width;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .footer-main {
+    small {
+      min-width: 0;
+    }
   }
 }

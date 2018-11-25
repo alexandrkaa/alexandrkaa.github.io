@@ -1,10 +1,7 @@
 .menu-list {
   @include list-reset;
-  max-width: $desktop-width;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
   background-color: $cl-white;
+  margin: 0 auto; // in list reset margin is disabled
 }
 
 .menu-list__item {
@@ -44,5 +41,20 @@
   &:focus,
   &:active {
     color: invert($cl-red);
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .menu-list__item {
+    min-height: 50px;
+    padding: 0;
+  }
+
+  .menu-list__link {
+    display: block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
   }
 }

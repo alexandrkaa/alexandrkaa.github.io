@@ -19,6 +19,38 @@ var includejs = require('gulp-include');
 var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-htmlmin');
 
+var ftpcred = require("./.ftpcred.json");
+var gutil = require( 'gulp-util' );
+var ftp = require( 'vinyl-ftp' );
+
+gulp.task( 'deploy', function () {
+  var conn = ftp.create( {
+    host: 'enut.ru',
+    user: ftpcred.login,
+    password: ftpcred.password,
+    parallel: 5,
+    log: gutil.log,
+  } );
+
+    var globs = [
+        'build/img/**',
+        'build/css/**',
+        'build/js/**',
+        'build/fonts/**',
+        'build/index.html'
+    ];
+
+    // using base = '.' will transfer everything to /public_html correctly
+    // turn off buffering in gulp.src for best performance
+
+    return gulp.src( globs, { base: '.', buffer: false } )
+        .pipe( conn.newer( '/www/enut.ru/paradoxprava' ) ) // only upload newer files
+        .pipe( conn.dest( '/www/enut.ru/paradoxprava' ) );
+
+} );
+
+
+
 gulp.task('minifyhtml', function () {
   return gulp.src('build/*.html')
     .pipe(htmlmin({ collapseWhitespace: false }))
