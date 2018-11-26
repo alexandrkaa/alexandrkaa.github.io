@@ -5,15 +5,30 @@
 
 .main-nav__toggler {
   display: none;
-  width: 50px;
+  width: 30px;
   height: 50px;
   border: 0;
   box-shadow: none;
   margin: 0;
   margin-left: auto;
   padding: 0;
+  margin-right: 20px;
   background-color: transparent;
-  background-image: linear-gradient(to bottom, $cl-grey, $cl-grey 10px, transparent 10px, transparent 20px, $cl-grey 20px, $cl-grey 30px, transparent 30px, transparent 40px, $cl-grey 40px, $cl-grey);
+  //background-image: linear-gradient(to bottom, $cl-grey, $cl-grey 10px, transparent 10px, transparent 20px, $cl-grey 20px, $cl-grey 30px, transparent 30px, transparent 40px, $cl-grey 40px, $cl-grey);
+  background-image: linear-gradient(to bottom, transparent, transparent 15px, $cl-grey 15px, $cl-grey 19px, transparent 19px, transparent 23px, $cl-grey 23px, $cl-grey 27px, transparent 27px, transparent 31px, $cl-grey 31px, $cl-grey 35px, transparent 35px, transparent);
+  position: relative;
+
+  &::before {
+    content: "Меню";
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    left: -100px;
+    top: 0;
+    font-size: 20px;
+    line-height: 50px;
+  }
 }
 
 .main-nav__list {
@@ -42,23 +57,23 @@
     background-color: $cl-white;
 
     .main-nav__list {
-      transform: scaleY(0);
-      transition: all 0.5s ease-in-out;
-      //height: 0;
-      max-height: 0;
-      transform-origin: top;
+      // transform: scaleY(0);
+      // transition: all 0.5s ease-in-out;
+      // max-height: 0;
+      // transform-origin: top;
+      display: none;
     }
   }
 
   .main-nav--opened {
     background: none;
 
-    .main-nav__list {
-      transform: scaleY(1);
-      max-height: 9999px;
-      transition: all 0.5s ease-in-out;
-      transform-origin: top;
-    }
+    // .main-nav__list {
+    //   // transform: scaleY(1);
+    //   // max-height: 9999px;
+    //   // transition: all 0.5s ease-in-out;
+    //   // transform-origin: top;
+    // }
   }
 
   .main-nav__toggler {
@@ -76,7 +91,7 @@
       &::after {
         content: "";
         position: absolute;
-        width: 50px;
+        width: 30px;
         height: 4px;
         top: 23px;
         left: 0;

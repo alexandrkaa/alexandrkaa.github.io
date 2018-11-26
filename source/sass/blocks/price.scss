@@ -69,6 +69,10 @@
   }
 }
 
+.price__lead {
+  width: 100%;
+}
+
 .price__value {
   margin-top: auto;
   min-height: 70px;
@@ -116,28 +120,9 @@
 
 @media (max-width: $tablet-width) {
   .price {
-    &--phone,
-    &--full-time,
-    &--docs {
-      background-size: auto 100px, auto 250px, auto;
-      background-position: center top 10px, center -55px, center top;
-    }
-
-    &--full-time {
-      background-size: auto 60px, auto 250px, auto;
-    }
-
     &--courts-representation {
       background-position: left -30px center;
       text-align: left;
-    }
-  }
-
-  .price__value {
-    .price--phone &,
-    .price--full-time &,
-    .price--docs & {
-      transform: rotate(0deg);
     }
   }
 }
