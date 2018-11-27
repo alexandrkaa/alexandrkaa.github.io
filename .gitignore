@@ -13,3 +13,5 @@ npm-debug.*
 source/css/*.css
 Thumbs.db
 template/
+#wp-content/
+.ftpconfig

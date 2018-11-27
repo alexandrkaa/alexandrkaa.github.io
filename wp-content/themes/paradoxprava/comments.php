@@ -1,0 +1,2 @@
+<?
+// The comments template.
