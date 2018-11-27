@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
 var rename = require('gulp-rename');
 var postcss = require('gulp-postcss');
@@ -128,11 +129,13 @@ gulp.task('clean', function () {
 
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
+    .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(sass({includePaths: require('node-normalize-scss').includePaths}))
     .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest('build/css'))
     .pipe(csso())
+    .pipe(sourcemaps.write('./build/css'))
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css'))
     .pipe(server.stream());

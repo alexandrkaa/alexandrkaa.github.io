@@ -19,15 +19,16 @@
     "gulp-posthtml": "^3.0.4",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "4.0.x",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-svgstore": "^7.0.0",
     "gulp-uglify": "^3.0.1",
     "gulp-util": "^3.0.8",
-    "vinyl-ftp": "^0.6.1",
     "gulp-webp": "^3.0.0",
     "npm": "^6.4.1",
     "posthtml-include": "^1.2.0",
     "stylelint": "9.6.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "vinyl-ftp": "^0.6.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
