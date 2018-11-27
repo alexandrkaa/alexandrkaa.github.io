@@ -3,13 +3,17 @@
   background-image: linear-gradient(to right, transparent, transparent 30%, $cl-blue-menu 30%, $cl-blue-menu);
 }
 
+.header-contacts__wrapper {
+  max-width: $desktop-width;
+  margin: 0 auto;
+}
+
 .header-contacts__list {
   @include list-reset;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: $desktop-width - 30px;
-  margin: 0 auto;
+  width: calc(100% - 30px);
   background-color: $cl-blue-menu;
   transform: translateX(15px);
 }

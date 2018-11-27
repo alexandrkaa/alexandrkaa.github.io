@@ -85,6 +85,10 @@
   align-items: center;
   font-weight: bold;
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     height: 70px;
+  }
+
   .price & {
     &:hover {
       transform: rotate(0);

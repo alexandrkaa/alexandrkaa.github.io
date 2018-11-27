@@ -3,13 +3,23 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>ParadoxPrava</title>
+        <title>Юридическая компания ПарадоксПрава</title>
         <link rel="stylesheet" href="css/style.min.css">
         <meta name="description" content="">
         <meta name="author" content="Alexander Komarov">
         <link type="text/plain" rel="author" href="humans.txt" />
         <link rel="preload" href="fonts/roboto-v18-latin_cyrillic-regular.woff2" as="font">
         <link rel="preload" href="fonts/roboto-v18-latin_cyrillic-700.woff2" as="font">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="img/site.webmanifest">
+        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="img/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
     </head>
     <body>
       <!-- <div style="display:none">
@@ -19,15 +29,10 @@
       <header class="header-main">
         <div class="header-banner">
           <div class="header-banner__wrapper">
-            <picture>
-              <!-- <source type="image/webp" media="(max-width: 659px)" srcset="img/iphone-screen-mobile@1x.webp 1x, img/iphone-screen-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 959px)" srcset="img/iphone-screen-1-tablet@1x.webp 1x, img/iphone-screen-1-tablet@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 960px)" srcset="img/iphone-screen-1-desktop@1x.webp 1x, img/iphone-screen-1-desktop@2x.webp 2x">
-              <source media="(max-width: 659px)" srcset="img/iphone-screen-mobile@1x.png 1x, img/iphone-screen-mobile@2x.png 2x">
-              <source media="(max-width: 959px)" srcset="img/iphone-screen-1-tablet@1x.png 1x, img/iphone-screen-1-tablet@2x.png 2x">
-              <source media="(min-width: 960px)" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x"> -->
-              <img class="header-banner__logo logo" src="img/logo.png" width="350" height="90" alt="Логотип ПарадоксПрава"><!--srcset=""-->
-            </picture>
+            <div class="header-banner__logo logo">
+              <img class="logo__image" src="img/logo.svg" width="90" height="90" alt="Логотип ПарадоксПрава">
+              <p class="logo__text">Парадокс <br>права</p>
+            </div>
             <p class="header-banner__promo-text">Вступительный текст. Судебное решение субъективно страхует причиненный ущерб, даже с учетом публичного характера данных правоотношений. Товарный кредит принципиально доказывает юридический платежный документ.</p>
           </div>
         </div>
@@ -37,27 +42,29 @@
           <ul class="main-nav__list menu-list">
             <li class="main-nav__item menu-list__item"><a class="menu-list__link" href="">Главная</a></li>
             <li class="main-nav__item menu-list__item"><a class="menu-list__link" href="">Услуги</a></li>
-            <li class="main-nav__item menu-list__item menu-list__item--active"><a class="menu-list__link" href="">Цены</a></li>
+            <li class="main-nav__item menu-list__item menu-list__item--active"><a class="menu-list__link">Цены</a></li>
             <li class="main-nav__item menu-list__item"><a class="menu-list__link" href="">Судебная практика</a></li>
             <li class="main-nav__item menu-list__item"><a class="menu-list__link" href="">Контактная информация</a></li>
           </ul>
         </nav>
         <section class="header-contacts">
           <h2 class="visually-hidden">Контакты</h2>
-          <ul class="header-contacts__list">
-            <li class="header-contacts__contact header-contacts__contact--phone">
-              <a href="tel:+74991361551">+7 (499) 136-15-51</a>
-            </li>
-            <li class="header-contacts__contact header-contacts__contact--phone">
-              <a href="tel:+79055363001">+7 (905) 536-30-01</a>
-            </li>
-            <li class="header-contacts__contact header-contacts__contact--phone">
-              <a href="tel:+79645944334">+7 (964) 594-43-34</a>
-            </li>
-            <li class="header-contacts__contact header-contacts__contact--email">
-              <a href="mailto:paradoxprava@yandex.ru">paradoxprava@yandex.ru</a>
-            </li>
-          </ul>
+          <div class="header-contacts__wrapper">
+            <ul class="header-contacts__list">
+              <li class="header-contacts__contact header-contacts__contact--phone">
+                <a href="tel:+74991361551">+7 (499) 136-15-51</a>
+              </li>
+              <li class="header-contacts__contact header-contacts__contact--phone">
+                <a href="tel:+79055363001">+7 (905) 536-30-01</a>
+              </li>
+              <li class="header-contacts__contact header-contacts__contact--phone">
+                <a href="tel:+79645944334">+7 (964) 594-43-34</a>
+              </li>
+              <li class="header-contacts__contact header-contacts__contact--email">
+                <a href="mailto:paradoxprava@yandex.ru">paradoxprava@yandex.ru</a>
+              </li>
+            </ul>
+          </div>
         </section>
       </header>
       <main>

@@ -13,6 +13,10 @@
   flex-direction: column;
   position: relative;
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     height: 550px;
+  }
+
   @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     background-image: url("../img/pravoslava1.png"), url("../img/top-lines@2x.png"), url("../img/menu-lines@2x.png"), url("../img/starandbg.jpg");
     background-size: auto, 100%, 1600px, cover, auto;
@@ -27,8 +31,8 @@
       width: 0;
       height: 0;
       border: 25px solid transparent;
-      border-left: 50vw solid $cl-white;
-      border-right: 50vw solid $cl-white;
+      border-left: 50% solid $cl-white;
+      border-right: 50% solid $cl-white;
       border-bottom: 0 solid $cl-white;
     }
   }

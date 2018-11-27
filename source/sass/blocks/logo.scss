@@ -1,0 +1,14 @@
+.logo {
+  width: 350px;
+  height: 90px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo__text {
+  margin: auto 0 auto 10px;;
+  font-size: 26px;
+  line-height: 34px;
+  text-transform: uppercase;
+  font-family: "Roboto", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+}
