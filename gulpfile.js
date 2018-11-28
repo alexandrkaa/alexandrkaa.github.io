@@ -123,8 +123,26 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('build'));
 });
 
+gulp.task('copy_wp', function () {
+  return gulp.src([
+      'build/fonts/**/*.{woff,woff2}',
+      'build/img/**',
+      'build/js/**',
+      'build/css/**',
+      'build/*.html',
+      'build/humans.txt'
+    ], {
+      base: 'build'
+    })
+    .pipe(gulp.dest('wp-content/themes/paradoxprava/assets'));
+});
+
 gulp.task('clean', function () {
  return del('build');
+});
+
+gulp.task('clean_wp', function () {
+ return del('wp-content/themes/paradoxprava/assets');
 });
 
 gulp.task('css', function () {
@@ -132,10 +150,13 @@ gulp.task('css', function () {
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(sass({includePaths: require('node-normalize-scss').includePaths}))
+    //.pipe(sourcemaps.write({includeContent: false}))
+    //.pipe(sourcemaps.init({loadMaps: true}))
     .pipe(postcss([autoprefixer()]))
+    //.pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/css'))
     .pipe(csso())
-    .pipe(sourcemaps.write('./build/css'))
+    //.pipe(sourcemaps.write('./build/css'))
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css'))
     .pipe(server.stream());
@@ -161,6 +182,6 @@ gulp.task('refresh', function (done) {
 });
 
 gulp.task('img', gulp.series('webp', 'images'));
-gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'js', 'html', 'minifyhtml'));
+gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'js', 'html', 'minifyhtml', 'clean_wp', 'copy_wp'));
 gulp.task('deploy', gulp.series('build', 'publish'));
 gulp.task('start', gulp.series('build', 'server'));
