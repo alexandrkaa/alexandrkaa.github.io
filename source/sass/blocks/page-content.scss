@@ -1,0 +1,24 @@
+.page-content {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  &--front-page {
+    max-width: none;
+    margin: 0;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .page-content {
+    max-width: none;
+    margin: 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .page-content {
+    max-width: none;
+    margin: 0;
+  }
+}
