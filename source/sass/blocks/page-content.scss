@@ -1,7 +1,10 @@
 .page-content {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 15px;
+
+  h1 {
+    padding: 0 15px;
+  }
 
   &--front-page {
     max-width: none;

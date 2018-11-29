@@ -7,8 +7,8 @@
       <meta name="description" content="">
       <meta name="author" content="Alexander Komarov">
       <link type="text/plain" rel="author" href="humans.txt" />
-      <link rel="preload" href="/wp-content/themes/paradoxprava/assets/fonts/roboto-v18-latin_cyrillic-regular.woff2" as="font">
-      <link rel="preload" href="/wp-content/themes/paradoxprava/assets/fonts/roboto-v18-latin_cyrillic-700.woff2" as="font">
+      <!-- <link rel="preload" href="/wp-content/themes/paradoxprava/assets/fonts/roboto-v18-latin_cyrillic-regular.woff2" as="font">
+      <link rel="preload" href="/wp-content/themes/paradoxprava/assets/fonts/roboto-v18-latin_cyrillic-700.woff2" as="font"> -->
 
       <link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/paradoxprava/assets/img/apple-touch-icon.png">
       <link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/paradoxprava/assets/img/favicon-32x32.png">
@@ -36,13 +36,6 @@
       <nav class="header-main__main-nav main-nav main-nav--nojs main-nav--opened">
         <!-- <span class="header-main__menu-label">Меню</span> -->
         <button class="main-nav__toggler" type="button" name="menutoggler"></button>
-        <!-- <ul class="main-nav__list menu-list">
-          <li class="main-nav__item menu-list__item"><a class="menu-list__link" href="">Главная</a></li>
-          <li class="main-nav__item menu-list__item"><a class="menu-list__link" href="">Услуги</a></li>
-          <li class="main-nav__item menu-list__item menu-list__item--active"><a class="menu-list__link">Цены</a></li>
-          <li class="main-nav__item menu-list__item"><a class="menu-list__link" href="">Судебная практика</a></li>
-          <li class="main-nav__item menu-list__item"><a class="menu-list__link" href="">Контактная информация</a></li>
-        </ul> -->
         <?php wp_nav_menu(
           array(
             'menu'=>'MainMenu',
@@ -71,7 +64,7 @@
         </div>
       </section>
     </header>
-    <main class="page-content <? (is_front_page() ? '' : 'page-content--front-page') ?>">
+    <main class="page-content <? if(is_front_page()) {echo 'page-content--front-page';} ?>">
       <? if(is_front_page()) { ?>
       <h1 class="visually-hidden">Юридическая компания ПарадоксПрава</h1>
       <? } else { ?>
