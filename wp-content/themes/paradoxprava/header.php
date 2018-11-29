@@ -19,7 +19,7 @@
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="msapplication-config" content="/wp-content/themes/paradoxprava/assets/img/browserconfig.xml">
       <meta name="theme-color" content="#ffffff">
-      <title><?php wp_title(''); ?></title>
+      <title><?php echo wp_get_document_title(); ?></title>
       <?php wp_head(); ?>
   </head>
   <body>
