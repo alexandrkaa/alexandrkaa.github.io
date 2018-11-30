@@ -31,9 +31,15 @@
       width: 0;
       height: 0;
       border: 25px solid transparent;
-      border-left: 50% solid $cl-white;
-      border-right: 50% solid $cl-white;
-      border-bottom: 0 solid $cl-white;
+      border-left-width: 50vw;
+      border-left-style: solid;
+      border-left-color: $cl-white;
+      border-right-width: 50vw;
+      border-right-style: solid;
+      border-right-color: $cl-white;
+      border-bottom-width: 0;
+      border-bottom-style: solid;
+      border-bottom-color: $cl-white;
     }
   }
 }

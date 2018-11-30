@@ -61,3 +61,14 @@ function shortcode_services() {
 }
 
 add_shortcode('services', 'shortcode_services');
+
+// удалить атрибут type у scripts и styles
+add_filter('style_loader_tag', 'clean_style_tag');
+function clean_style_tag($src) {
+    return str_replace("type='text/css'", '', $src);
+}
+
+add_filter('script_loader_tag', 'clean_script_tag');
+function clean_script_tag($src) {
+    return str_replace("type='text/javascript'", '', $src);
+}
