@@ -9,7 +9,7 @@ add_action( 'wp_enqueue_scripts', 'paradoxprava_scripts' );
 // add_action('wp_print_styles', 'theme_name_scripts'); // можно использовать этот хук он более поздний
 function paradoxprava_scripts() {
 	wp_enqueue_style( 'main-styles', get_template_directory_uri() . '/assets/css/style.min.css' );
-	wp_enqueue_script( 'scripts-bundle', get_template_directory_uri() . '/assets/js/app.min.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'scripts-bundle', get_template_directory_uri() . '/assets/js/app.min.js', array(), date('Ym'), true );
 }
 
 // add active class to active menu li
@@ -51,7 +51,7 @@ function shortcode_services() {
   $ret = '<ul class="services__list">';
   foreach ($pages as $page) {
     $ret .= '
-    <li class="services__service services__service--'.$page->post_name.'">
+    <li class="services__service services__service--'.$page->post_name.' no-webp">
       <a class="services__service-link" href="/services/'.$page->post_name.'">'.$page->post_title.'</a>
     </li>
     ';

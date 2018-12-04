@@ -2,7 +2,6 @@
   background-color: $cl-white;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-image: url("../img/pravoslava1.png"), url("../img/top-lines@1x.png"), url("../img/menu-lines@1x.png"), url("../img/starandbg.jpg");
-  //background-image: url("../img/pravoslava1.webp"), url("../img/top-lines@1x.webp"), url("../img/menu-lines@1x.png"), url("../img/starandbg.webp");
   background-size: auto, 100%, auto, cover;
   background-position: left 80% top 90px, center top, left calc(50% + 100px) top 430px, center top;
   color: $cl-white;
@@ -14,18 +13,25 @@
   flex-direction: column;
   position: relative;
 
+  &.webp {
+    background-image: url("../img/pravoslava1.webp"), url("../img/top-lines@1x.webp"), url("../img/menu-lines@1x.webp"), url("../img/starandbg.webp");
+  }
+
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-     height: 550px;
+    height: 550px;
   }
 
   @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     background-image: url("../img/pravoslava1.png"), url("../img/top-lines@2x.png"), url("../img/menu-lines@2x.png"), url("../img/starandbg.jpg");
-    //background-image: url("../img/pravoslava1.webp"), url("../img/top-lines@2x.webp"), url("../img/menu-lines@2x.png"), url("../img/starandbg.webp");
+
+    &.webp {
+      background-image: url("../img/pravoslava1.webp"), url("../img/top-lines@2x.webp"), url("../img/menu-lines@2x.webp"), url("../img/starandbg.webp");
+    }
     background-size: auto, 100%, 1600px, cover;
   }
 
   @media (max-width: 2560px) {
-      //background-size: auto, 100%, 1600px, cover, contain;
+    //background-size: auto, 100%, 1600px, cover, contain;
     // &::after {
     //   content: "";
     //   display: block;
@@ -61,8 +67,11 @@
     background-position: right 0 top 70px, center top, left calc(50% + 100px) top 430px, top center;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-image: url("../img/pravoslava1.png"), url("../img/top-lines@1x.png"), url("../img/menu-lines@1x.png"), url("../img/starandbg.jpg");
-    //background-image: url("../img/pravoslava1.webp"), url("../img/top-lines@1x.webp"), url("../img/menu-lines@1x.png"), url("../img/starandbg.webp");
     background-size: auto, 100%, auto, cover, auto;
+
+    &.webp {
+      background-image: url("../img/pravoslava1.webp"), url("../img/top-lines@1x.webp"), url("../img/menu-lines@1x.webp"), url("../img/starandbg.webp");
+    }
   }
 
   .header-main__main-nav {
@@ -89,9 +98,12 @@
     background-position: center top, top center;
     background-repeat: no-repeat, no-repeat;
     background-image: url("../img/top-lines@1x.png"), url("../img/starandbg.jpg");
-    //background-image: url("../img/top-lines@1x.webp"), url("../img/starandbg.webp");
     background-size: 150%, auto;
     padding-top: 40px;
+
+    &.webp {
+      background-image: url("../img/top-lines@1x.webp"), url("../img/starandbg.webp");
+    }
   }
 
   .header-main__main-nav {

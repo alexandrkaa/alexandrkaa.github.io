@@ -23,7 +23,7 @@
       <?php wp_head(); ?>
   </head>
   <body>
-    <header class="header-main">
+    <header class="header-main no-webp">
       <div class="header-banner">
         <div class="header-banner__wrapper">
           <div class="header-banner__logo logo">
