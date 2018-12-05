@@ -25,6 +25,9 @@ AddType application/x-font-opentype .otf
 AddType application/x-font-woff .woff
 AddType application/font-woff2 .woff2
 AddType image/svg+xml .svg
+AddType image/webp .webp
+AddType image/png .png
+AddType image/jpeg .jpg
 
 # Compress compressible fonts
 # only uncomment if you dont have compression turned on already. Otherwise it will cause all other filestypes not to get compressed
@@ -39,3 +42,6 @@ ExpiresByType application/x-font-opentype "access plus 1 year"
 ExpiresByType application/x-font-woff "access plus 1 year"
 ExpiresByType application/font-woff2 "access plus 1 year"
 ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
