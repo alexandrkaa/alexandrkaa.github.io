@@ -32,6 +32,10 @@
     background-size: auto 120px, auto 200px, auto;
     background-position: center top, center -30px, center top;
 
+    &.webp {
+      background-image: url("../img/price-phone.svg"), url("../img/price-card-star@1x.webp"), linear-gradient(to bottom, transparent, transparent 28px, #297cc4 28px, #297cc4 86px, transparent 86px, transparent);
+    }
+
     &:hover {
       background-size: auto 120px, auto 250px, auto;
       background-position: center top, center -55px, center top;
@@ -142,6 +146,9 @@
   .price {
     &--courts-representation {
       background-position: left -30px center;
+      background-size: 70px 105%;
+      padding-left: 60px;
+      padding-right: 5px;
       text-align: left;
     }
   }
