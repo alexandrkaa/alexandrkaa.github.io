@@ -2,23 +2,53 @@
   color: $cl-grey;
   font-size: 22px;
   line-height: 28px;
-  font-family: "Lora", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+  font-family: "Roboto", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
 }
 
 .header-banner__wrapper {
   max-width: $desktop-width;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.header-banner__promo-text {
-  max-width: 50%;
-  padding: 0 15px;
+.header-banner__promo-text,
+.header-banner__contacts {
+  flex-basis: 50%;
   color: #34454f;
 }
 
+.header-banner__contacts {
+  text-align: right;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.header-banner__promo-text {
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: left;
+}
+
+.header-banner__contacts-link {
+  color: $cl-red;
+  text-decoration: underline;
+
+  &:hover {
+    color: lighten($cl-red, 30%);
+  }
+
+  &:focus,
+  &:active {
+    color: invert($cl-red);
+  }
+}
+
 .header-banner__logo {
-  margin-left: 15px;
+  margin: 0 auto;
   margin-bottom: 55px;
+  justify-content: center;
+  flex-basis: 100%;
 }
 
 @media (max-width: $tablet-width) {
@@ -26,5 +56,14 @@
     max-width: 100%;
     font-size: 20px;
     line-height: 28px;
+    flex-basis: 100%;
+  }
+
+  .header-banner__wrapper {
+    padding: 0 15px;
+  }
+
+  .header-banner__contacts {
+    flex-basis: 100%;
   }
 }

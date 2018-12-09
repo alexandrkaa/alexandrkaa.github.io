@@ -1,0 +1,63 @@
+.advantages {
+  background: $cl-white url("../img/hammer-bg.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  margin-top: -30px;
+  padding-top: 30px;
+  min-height: 400px;
+  color: $cl-white;
+}
+
+.advantages__wrapper {
+  max-width: ($desktop-width);
+  margin: 0 auto;
+}
+
+.advantages__slide {
+  padding: 0 50px;
+}
+
+.advantages__lead {
+  font-size: 24px;
+  line-height: 30px;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.advantages__header {
+  margin: 0;
+  //padding: 50px 0 15px 0;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.advantages__advantage {
+  @include list-reset;
+}
+
+.advantages__advantage-item {
+  padding: 0;
+  padding-left: 24px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 4px;
+    left: 0;
+    background: transparent url("../img/advantages-arrow.svg") center center no-repeat;
+    background-size: 20px 20px;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  max-width: $tablet-width;
+}
+
+@media (max-width: $tablet-width) {
+  max-width: none;
+}

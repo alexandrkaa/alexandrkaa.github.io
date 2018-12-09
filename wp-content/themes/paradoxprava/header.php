@@ -30,7 +30,8 @@
             <img class="logo__image" src="/wp-content/themes/paradoxprava/assets/img/logo.svg" width="90" height="90" alt="Логотип ПарадоксПрава">
             <p class="logo__text">Парадокс <br>права</p>
           </div>
-          <p class="header-banner__promo-text">Вступительный текст. Судебное решение субъективно страхует причиненный ущерб, даже с учетом публичного характера данных правоотношений. Товарный кредит принципиально доказывает юридический платежный документ.</p>
+          <p class="header-banner__promo-text">Юридические услуги</p>
+          <p class="header-banner__contacts">г. Москва, ст. м. Китай-Город,<br> ул. Солянка, д. 15, этаж 1, офис 103<br> <a class="header-banner__contacts-link" href="tel:84991361551">8-499-136-15-51</a>, <a class="header-banner__contacts-link" href="tel:89055363001">8-905-536-30-01</a>, <a class="header-banner__contacts-link" href="tel:89645944334">8-964-594-43-34</a> <br>Ежедневно с 09:00 до 20:00 <br><a class="header-banner__contacts-link" href="javascript:jivo_api.open();">Написать нам</a></p>
         </div>
       </div>
       <nav class="header-main__main-nav main-nav main-nav--nojs main-nav--opened">
@@ -66,7 +67,7 @@
     </header>
     <main class="page-content <? if(is_front_page()) {echo 'page-content--front-page';} ?>">
       <? if(is_front_page()) { ?>
-      <h1 class="visually-hidden">Юридическая компания ПарадоксПрава</h1>
+      <h1 class="page-content__header visually-hidden">Юридическая компания ПарадоксПрава</h1>
       <? } else { ?>
-      <h1><? wp_title(''); ?></h1>
+      <h1 class="page-content__header"><? wp_title(''); ?></h1>
       <? } ?>

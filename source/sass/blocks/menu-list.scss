@@ -1,6 +1,7 @@
 .menu-list {
   @include list-reset;
-  background-color: $cl-white;
+  //background-color: $cl-white;
+  background-color: $cl-red;
   margin: 0 auto; // in list reset margin is disabled
 }
 
@@ -10,37 +11,38 @@
   justify-content: center;
   align-items: center;
   padding: 0 35px;
-  background-color: $cl-white;
+  //background-color: $cl-white;
+  background-color: $cl-red;
 
   &--active {
-    background-color: $cl-red;
+    background-color: $cl-white;
 
     .menu-list__link {
-      color: $cl-white;
+      color: $cl-red;
 
       &:hover {
-        color: transparentize($cl-white, 0.3);
+        color: transparentize($cl-red, 0.3);
       }
 
       &:focus,
       &:active {
-        color: invert($cl-red);
+        color: invert($cl-grey);
       }
     }
   }
 }
 
 .menu-list__link {
-  color: $cl-red;
+  color: $cl-white;
   text-decoration: underline;
 
   &:hover {
-    color: lighten($cl-red, 30%);
+    color: lighten($cl-grey, 30%);
   }
 
   &:focus,
   &:active {
-    color: invert($cl-red);
+    color: invert($cl-grey);
   }
 }
 
