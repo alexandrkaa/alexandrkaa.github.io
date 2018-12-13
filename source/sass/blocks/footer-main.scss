@@ -10,7 +10,8 @@
   text-transform: uppercase;
 
   small {
-    min-width: $desktop-width;
+    max-width: $desktop-width;
+    width: 100%;
     margin: 0 auto;
     font: inherit;
     padding: 5px 15px;

@@ -22,6 +22,13 @@
     background-position: center center;
     background-repeat: no-repeat;
   }
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $cl-blue-light;
+    color: $cl-blue;
+    transition: all ease-in-out 0.4s;
+  }
 }
 
 .feature--consult {

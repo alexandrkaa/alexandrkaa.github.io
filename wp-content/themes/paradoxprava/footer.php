@@ -3,6 +3,13 @@
       <small>&copy; <?=date('Y')?> Парадокс Права - Юридические услуги</small>
     </footer>
     <!-- <script src="js/app.min.js"></script> -->
+    <? if(!is_front_page()) { ?>
+    <script>
+    window.onload = function() {
+      $(".main-nav").goTo();
+    }
+    </script>
+    <? } ?>
       <?php wp_footer(); ?>
       <!-- BEGIN JIVOSITE CODE {literal} -->
       <script>

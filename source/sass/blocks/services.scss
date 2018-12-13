@@ -64,6 +64,28 @@
     background-repeat: no-repeat;
   }
 
+  &:hover {
+    .services__service-link {
+      color: $cl-yellow;
+    }
+    &::after {
+      border-right-color: $cl-yellow;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3px;
+    border: 11px solid transparent;
+    transition: all ease-in-out 0.4s;
+  }
+
   &--family {
     &::before {
       background-image: url("../img/family_1309532@1x.png");
@@ -404,11 +426,13 @@
 .services__service-link {
   color: $cl-white;
   text-decoration: underline;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 22px;
+  position: relative;
 
   &:hover {
-    color: transparentize($cl-white, 0.3);
+    color: $cl-yellow;//transparentize($cl-white, 0.3);
+    transition: all ease-in-out 0.5s;
   }
 
   &:visited {
@@ -417,7 +441,7 @@
 
   &:active,
   &:focus {
-    color: $cl-blue-dark;
+    color: $cl-yellow;
   }
 }
 

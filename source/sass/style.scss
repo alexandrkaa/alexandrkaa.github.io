@@ -1,6 +1,7 @@
 $mobile-width: 414px;
 $tablet-width: 768px;
-$desktop-width: 1140px;
+//$desktop-width: 1140px;
+$desktop-width: 1080px;
 
 $cl-grey: #4a4a4a;
 $cl-white: #ffffff;
@@ -10,6 +11,7 @@ $cl-blue-light: #86c7ff;
 $cl-blue-dark: #164cc1;
 $cl-blue-menu: #007dc8;
 $cl-blue-footer: #0071b2;
+$cl-yellow: #fff500;
 
 @import "normalize";
 @import "mixin.scss";

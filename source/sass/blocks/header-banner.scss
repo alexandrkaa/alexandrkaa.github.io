@@ -12,10 +12,20 @@
   flex-wrap: wrap;
 }
 
+.header-banner__logo-text {
+  font-size: 24px;
+  line-height: 34px;
+  text-transform: uppercase;
+  font-family: "Roboto", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+  font-style: italic;
+}
+
 .header-banner__promo-text,
 .header-banner__contacts {
   flex-basis: 50%;
   color: #34454f;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .header-banner__contacts {
@@ -24,9 +34,11 @@
   line-height: 24px;
 }
 
-.header-banner__promo-text {
+.header-banner__firm-services-text {
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: bold;
   text-align: left;
 }
 

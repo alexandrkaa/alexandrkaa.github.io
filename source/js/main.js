@@ -43,13 +43,24 @@ main_nav_toggler.addEventListener('click', function() {
 
 //=require node_modules/picturefill/dist/picturefill.min.js
 //=require node_modules/jquery/dist/jquery.min.js
+
+(function($) {
+    $.fn.goTo = function() {
+        $('html, body').animate({
+            scrollTop: $(this).offset().top + 'px'
+        }, 'fast');
+        return this; // for chaining...
+    }
+})(jQuery);
+
 //=require node_modules/slick-carousel/slick/slick.min.js
-$(document).ready(function(){
+
+$(document).ready(function() {
   $('.advantages__slider').slick({
     "accessibility": true,
     "autoplay": true,
     "autoplaySpeed": 2000,
-    "dots": true,
+    "dots": false,
     "pauseOnFocus": true,
     "pauseOnHover": true,
     "centerMode": true,
@@ -57,12 +68,11 @@ $(document).ready(function(){
     "slidesToScroll": 1,
     "responsive": [
     {
-      "breakpoint": "1141",
+      "breakpoint": "1081",
       settings: {
         "slidesToShow": 2,
         "slidesToScroll": 2,
         "infinite": true,
-        "dots": true
       }
     },
     {

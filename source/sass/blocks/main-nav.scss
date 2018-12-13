@@ -58,14 +58,8 @@
   }
 
   .main-nav--opened {
-    background: none;
-
-    // .main-nav__list {
-    //   // transform: scaleY(1);
-    //   // max-height: 9999px;
-    //   // transition: all 0.5s ease-in-out;
-    //   // transform-origin: top;
-    // }
+    //background: none;
+    background-color: $cl-white;
   }
 
   .main-nav__toggler {
