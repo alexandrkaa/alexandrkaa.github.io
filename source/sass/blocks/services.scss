@@ -435,8 +435,8 @@
   position: relative;
 
   &:hover {
-    color: $cl-yellow;//transparentize($cl-white, 0.3);
-    transition: all ease-in-out 0.5s;
+    color: transparentize($cl-white, 0.3);
+    transition: all ease-in-out 0.7s;
   }
 
   &:visited {

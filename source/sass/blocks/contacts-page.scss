@@ -78,6 +78,10 @@
   &:active {
     color: invert($cl-red);
   }
+
+  &--popup {
+    color: $cl-blue-dark;
+  }
 }
 
 @media (max-width: $desktop-width) {
