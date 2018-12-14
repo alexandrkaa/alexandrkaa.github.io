@@ -54,10 +54,11 @@
   &::before {
     content: "";
     display: block;
-    width: 80px;
+    width: 50px;
     height: 50px;
     position: absolute;
-    left: 0;
+    border-radius: 50%;
+    left: 15px;
     top: 0;
     background-color: transparent;
     background-position: center center;
@@ -65,11 +66,14 @@
   }
 
   &:hover {
-    .services__service-link {
-      color: $cl-yellow;
+    &::before {
+      background-color: $cl-red;
+      transition: all ease-in-out 0.7s;
     }
+
     &::after {
-      border-right-color: $cl-yellow;
+      border-right-color: $cl-red;
+      transition: all ease-in-out 0.7s;
     }
   }
 
@@ -83,7 +87,7 @@
     transform: translateY(-50%);
     right: 3px;
     border: 11px solid transparent;
-    transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.7s;
   }
 
   &--family {

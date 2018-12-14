@@ -1,13 +1,14 @@
 .header-main {
   background-color: transparent;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-image: url("../img/top-lines@1x.png"), url("../img/menu-lines@1x.png"), url("../img/triangle.svg"), url("../img/standardbg.jpg");
+  //background-image: url("../img/top-lines@1x.png"), url("../img/menu-lines@1x.png"), url("../img/triangle.svg"), url("../img/standardbg.jpg");
+  background-image: url("../img/top-lines@1x.png"), url("../img/menu-lines@1x.png"), url("../img/standardbg.jpg");
   background-size: 100%, auto, 105% auto, cover;
-  background-position: center top, left calc(50% + 115px) top 230px, center bottom -1px, center top;
+  background-position: center top, left calc(50% + 115px) top 200px, center top;
   color: $cl-white;
-  min-height: 500px;
+  min-height: 528px;
   padding: 0;
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 0;
   display: flex;
   flex-direction: column;
@@ -15,7 +16,7 @@
   z-index: 1;
 
   &.webp {
-    background-image: url("../img/top-lines@1x.webp"), url("../img/menu-lines@1x.webp"), url("../img/triangle.svg"), url("../img/standardbg.webp");
+    background-image: url("../img/top-lines@1x.webp"), url("../img/menu-lines@1x.webp"), url("../img/standardbg.webp");
   }
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -23,28 +24,28 @@
   }
 
   @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    background-image: url("../img/top-lines@2x.png"), url("../img/menu-lines@2x.png"), url("../img/triangle.svg"), url("../img/standardbg.jpg");
+    background-image: url("../img/top-lines@2x.png"), url("../img/menu-lines@2x.png"), url("../img/standardbg.jpg");
 
     &.webp {
-      background-image: url("../img/top-lines@2x.webp"), url("../img/menu-lines@2x.webp"), url("../img/triangle.svg"), url("../img/standardbg.webp");
+      background-image: url("../img/top-lines@2x.webp"), url("../img/menu-lines@2x.webp"), url("../img/standardbg.webp");
     }
-    background-size: 100%, 1600px, 105% auto, cover;
+    background-size: 100%, 1600px, cover;
   }
 }
 
 .header-main__main-nav {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 @media (max-width: $desktop-width) {
   .header-main {
     background-position: center top, left calc(50% + 100px) top 210px, center bottom -1px, top center;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    background-image: url("../img/top-lines@1x.png"), url("../img/menu-lines@1x.png"), url("../img/triangle.svg"), url("../img/standardbg-1600.jpg");
-    background-size: 100%, auto, 105% auto, cover;
+    background-image: url("../img/top-lines@1x.png"), url("../img/menu-lines@1x.png"), url("../img/standardbg-1600.jpg");
+    background-size: 100%, auto, cover;
 
     &.webp {
-      background-image: url("../img/top-lines@1x.webp"), url("../img/menu-lines@1x.webp"), url("../img/triangle.svg"), url("../img/standardbg-1600.webp");
+      background-image: url("../img/top-lines@1x.webp"), url("../img/menu-lines@1x.webp"), url("../img/standardbg-1600.webp");
     }
   }
 
@@ -55,10 +56,11 @@
 
 @media (max-width: 900px) {
   .header-main {
-    background-position: center top, left calc(50% + 100px) top 235px, center bottom -1px, top center;
+    background-position: center top, left calc(50% + 100px) top 235px, top center;
   }
+
   .header-main__main-nav {
-    margin-top: 90px;
+    margin-top: 60px;
   }
 
   .header-main__menu-label {
@@ -77,6 +79,10 @@
     &.webp {
       background-image: url("../img/top-lines@1x.webp"), url("../img/standardbg-1600.webp");
     }
+  }
+
+  .header-banner__contacts-block {
+    display: none;
   }
 
   .header-main__main-nav {

@@ -20,6 +20,7 @@
       <meta name="msapplication-config" content="/wp-content/themes/paradoxprava/assets/img/browserconfig.xml">
       <meta name="theme-color" content="#ffffff">
       <title><?php echo wp_get_document_title(); ?></title>
+      <meta name="google-site-verification" content="RI5Z2BijJXWON4OTDeZfY--wy3iSPUsXdEa0goVqG6o" />
       <?php wp_head(); ?>
   </head>
   <body>
@@ -27,13 +28,17 @@
       <div class="header-banner">
         <div class="header-banner__wrapper">
           <div class="header-banner__logo logo">
-            <img class="logo__image" src="/wp-content/themes/paradoxprava/assets/img/logo.svg" width="90" height="90" alt="Логотип ПарадоксПрава">
+            <figure class="logo__wrapper">
+              <img class="logo__image logo__image--tribar" src="/wp-content/themes/paradoxprava/assets/img/tribar.svg" width="200" height="200" alt="Логотип Парадокс Права">
+              <img class="logo__image logo__image--book" src="/wp-content/themes/paradoxprava/assets/img/book_eagle.svg" width="100" height="100" alt="Книга на логотипе">
+            </figure>
           </div>
           <p class="header-banner__promo-text">
-            <span class="header-banner__logo-text">Парадокс права</span><br>
+            <span class="header-banner__logo-text">Парадокс Права</span><br>
             <span class="header-banner__firm-services-text">Юридические услуги</span>
           </p>
-          <p class="header-banner__contacts">г. Москва, ст. м. Китай-Город,<br> ул. Солянка, д. 15, этаж 1, офис 103<br> <a class="header-banner__contacts-link" href="tel:84991361551">8-499-136-15-51</a>, <a class="header-banner__contacts-link" href="tel:89055363001">8-905-536-30-01</a>, <a class="header-banner__contacts-link" href="tel:89645944334">8-964-594-43-34</a> <br>Ежедневно с 09:00 до 20:00 <br><a class="header-banner__contacts-link" href="javascript:jivo_api.open();">Написать нам</a></p>
+          <!-- <a class="contacts-block__link" href="tel:84991361551">8-499-136-15-51</a>, <a class="contacts-block__link" href="tel:89055363001">8-905-536-30-01</a>, <a class="contacts-block__link" href="tel:89645944334">8-964-594-43-34</a> -->
+          <address class="header-banner__contacts-block contacts-block contacts-block--header no-webp">г. Москва, ул. Солянка,<br> д. 15,  этаж 1, офис 103<br> Ежедневно с 09:00 до 20:00 <br>рядом с м. Китай-город</address>
         </div>
       </div>
       <nav class="header-main__main-nav main-nav main-nav--nojs main-nav--opened">

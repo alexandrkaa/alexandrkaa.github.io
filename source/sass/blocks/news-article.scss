@@ -1,0 +1,14 @@
+.news-article {
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (max-width: $desktop-width) {
+  max-width: $tablet-width;
+}
+
+@media (max-width: $tablet-width) {
+  max-width: none;
+  margin: 0;
+}

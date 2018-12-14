@@ -14,15 +14,27 @@ function paradoxprava_scripts() {
 
 // add active class to active menu li
 function special_nav_class ($classes, $item) {
-    if (in_array('current-menu-item', $classes) ){
+  // echo "<pre>";
+  // var_dump($item);
+  // echo "</pre>";
+  //if( strtolower ($args->menu_class) == "footer-nav__list") {
+    if (in_array('current-menu-item', $classes) && !in_array('footer-nav__item', $classes) ) {
         $classes[] = 'menu-list__item--active ';
     }
+  //}
     return $classes;
 }
 
 //add link class
 function add_menu_atts( $atts, $item, $args ) {
-  $atts['class'] = 'menu-list__link';
+  // echo "<pre>";
+  // var_dump($args->menu_class);
+  // echo "</pre>";
+  if( strtolower ($args->menu_class) == "footer-nav__list") {
+    $atts['class'] = 'footer-nav__link';
+  } else {
+    $atts['class'] = 'menu-list__link';
+  }
   return $atts;
 }
 

@@ -1,14 +1,19 @@
 .advantages {
   background-color: $cl-blue;
-  background-image: url("../img/triangle-reverse.svg"), url("../img/hammer-bg.jpg");
-  background-position: top -1px center, center center;
-  background-repeat: no-repeat, no-repeat;
-  background-size: 105% auto, cover;
+  //background-image: url("../img/triangle-reverse.svg"), url("../img/hammer-bg.jpg");
+  background-image: url("../img/hammer-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   z-index: 0;
   padding-top: 30px;
   min-height: 400px;
   color: $cl-white;
+
+  &.webp {
+    background-image: url("../img/hammer-bg.webp");
+  }
 }
 
 .advantages__wrapper {
@@ -59,6 +64,11 @@
 @media (max-width: $desktop-width) {
   .advantages {
     min-height: 420px;
+    background-image: url("../img/hammer-bg-tablet.jpg");
+
+    &.webp {
+      background-image: url("../img/hammer-bg-tablet.webp");
+    }
   }
 }
 
@@ -66,9 +76,16 @@
   .advantages {
     max-width: none;
     background-color: $cl-blue;
-    background-image: url("../img/hammer-bg.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("../img/hammer-bg-mobile.jpg");
+    padding-top: 0;
+    padding-bottom: 20px;
+
+    &.webp {
+      background-image: url("../img/hammer-bg-mobile.webp");
+    }
+  }
+
+  .advantages__lead {
+    margin-top: 0;
   }
 }

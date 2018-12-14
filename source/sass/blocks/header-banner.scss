@@ -13,52 +13,40 @@
 }
 
 .header-banner__logo-text {
-  font-size: 24px;
-  line-height: 34px;
-  text-transform: uppercase;
-  font-family: "Roboto", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
-  font-style: italic;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: none;
+  font-family: "Lora", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+  background-color: $cl-red;
+  padding: 10px;
+  color: $cl-white;
+  display: inline-block;
+  //font-style: italic;
 }
 
 .header-banner__promo-text,
-.header-banner__contacts {
+.header-banner__contacts-block {
   flex-basis: 50%;
-  color: #34454f;
-  padding: 0 15px;
   box-sizing: border-box;
-}
-
-.header-banner__contacts {
-  text-align: right;
-  font-size: 16px;
-  line-height: 24px;
+  padding: 15px;
+  margin: 0;
 }
 
 .header-banner__firm-services-text {
   text-transform: uppercase;
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 18px;
+  line-height: 22px;
   font-weight: bold;
-  text-align: left;
-}
-
-.header-banner__contacts-link {
-  color: $cl-red;
-  text-decoration: underline;
-
-  &:hover {
-    color: lighten($cl-red, 30%);
-  }
-
-  &:focus,
-  &:active {
-    color: invert($cl-red);
-  }
+  text-align: center;
+  background-color: $cl-blue;
+  color: $cl-white;
+  padding: 10px;
+  display: inline-block;
 }
 
 .header-banner__logo {
   margin: 0 auto;
-  margin-bottom: 55px;
+  //margin-bottom: 55px;
   justify-content: center;
   flex-basis: 100%;
 }

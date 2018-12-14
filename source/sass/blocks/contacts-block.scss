@@ -1,0 +1,46 @@
+.contacts-block {
+  //color: #34454f;
+  padding: 15px;
+  text-align: right;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  text-transform: none;
+  color: $cl-white;
+
+  &--header {
+    background-image: url("../img/geotag.png"), url("../img/adress_ribon.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right top, right center;
+    padding-right: 45px;
+    padding-top: 30px;
+    height: 160px;
+
+    &.webp {
+      background-image: url("../img/geotag.webp"), url("../img/adress_ribon.webp");
+    }
+  }
+}
+
+.contacts-block__link {
+  color: $cl-red;
+  text-decoration: underline;
+
+  .contacts-block--footer & {
+    color: $cl-white;
+    text-decoration: none;
+  }
+
+  &--popup {
+    color: $cl-blue-dark;
+  }
+
+  &:hover {
+    color: lighten($cl-red, 30%);
+  }
+
+  &:focus,
+  &:active {
+    color: invert($cl-red);
+  }
+}
