@@ -29,7 +29,11 @@
           <div class="header-banner__logo logo">
             <figure class="logo__wrapper">
               <img class="logo__image logo__image--tribar" src="img/tribar.svg" width="200" height="200" alt="Логотип Парадокс Права">
-              <img class="logo__image logo__image--book" src="img/book_eagle.svg" width="100" height="100" alt="Логотип Парадокс Права">
+              <picture>
+                <source type="image/webp" srcset="img/book_eagle@1x.webp 1x, book_eagle@2x.webp 2x">
+                <source type="image/png" srcset="img/book_eagle@1x.png 1x, book_eagle@2x.png 2x">
+                <img class="logo__image logo__image--book" src="img/book_eagle@1x.png" width="100" height="100" alt="Логотип Парадокс Права">
+              </picture>
             </figure>
           </div>
           <p class="header-banner__promo-text">

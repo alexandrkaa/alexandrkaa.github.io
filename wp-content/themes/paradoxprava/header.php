@@ -30,7 +30,12 @@
           <div class="header-banner__logo logo">
             <figure class="logo__wrapper">
               <img class="logo__image logo__image--tribar" src="/wp-content/themes/paradoxprava/assets/img/tribar.svg" width="200" height="200" alt="Логотип Парадокс Права">
-              <img class="logo__image logo__image--book" src="/wp-content/themes/paradoxprava/assets/img/book_eagle.svg" width="100" height="100" alt="Книга на логотипе">
+              <!-- <img class="logo__image logo__image--book" src="/wp-content/themes/paradoxprava/assets/img/book_eagle.svg" width="100" height="100" alt="Книга на логотипе"> -->
+              <picture>
+                <source type="image/webp" srcset="/wp-content/themes/paradoxprava/assets/img/book_eagle@1x.webp 1x, book_eagle@2x.webp 2x">
+                <source type="image/png" srcset="img/book_eagle@1x.png 1x, book_eagle@2x.png 2x">
+                <img class="logo__image logo__image--book" src="/wp-content/themes/paradoxprava/assets/img/book_eagle@1x.png" width="90" height="100" alt="Логотип Парадокс Права">
+              </picture>
             </figure>
           </div>
           <p class="header-banner__promo-text">
