@@ -8,8 +8,8 @@ add_theme_support('menus');
 add_action( 'wp_enqueue_scripts', 'paradoxprava_scripts' );
 // add_action('wp_print_styles', 'theme_name_scripts'); // можно использовать этот хук он более поздний
 function paradoxprava_scripts() {
-	wp_enqueue_style( 'main-styles', get_template_directory_uri() . '/assets/css/style.min.css' );
-	wp_enqueue_script( 'scripts-bundle', get_template_directory_uri() . '/assets/js/app.min.js', array(), date('Ym'), true );
+  wp_enqueue_style( 'main-styles', get_template_directory_uri() . '/assets/css/style.min.img.css' );
+  wp_enqueue_script( 'scripts-bundle', get_template_directory_uri() . '/assets/js/app.min.js', array(), date('Ym'), true );
 }
 
 // add active class to active menu li
@@ -84,3 +84,19 @@ add_filter('script_loader_tag', 'clean_script_tag');
 function clean_script_tag($src) {
     return str_replace("type='text/javascript'", '', $src);
 }
+
+// below disabling diff WP default styles and JS
+
+function my_deregister_scripts(){
+  wp_deregister_script( 'wp-embed' );
+}
+add_action( 'wp_footer', 'my_deregister_scripts' );
+
+//Disable gutenberg style in Front
+function wps_deregister_styles() {
+    wp_dequeue_style( 'wp-block-library' );
+}
+add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');

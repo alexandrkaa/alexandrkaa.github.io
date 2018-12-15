@@ -36,12 +36,12 @@ AddType image/jpeg .jpg
 ExpiresActive on
 
 # Add a far future Expires header for fonts
-ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
-ExpiresByType application/x-font-ttf "access plus 1 year"
-ExpiresByType application/x-font-opentype "access plus 1 year"
-ExpiresByType application/x-font-woff "access plus 1 year"
-ExpiresByType application/font-woff2 "access plus 1 year"
-ExpiresByType image/svg+xml "access plus 1 year"
-ExpiresByType image/webp "access plus 1 year"
-ExpiresByType image/png "access plus 1 year"
-ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType application/vnd.ms-fontobject "access plus 7 days"
+ExpiresByType application/x-font-ttf "access plus 7 days"
+ExpiresByType application/x-font-opentype "access plus 7 days"
+ExpiresByType application/x-font-woff "access plus 7 days"
+ExpiresByType application/font-woff2 "access plus 7 days"
+ExpiresByType image/svg+xml "access plus 7 days"
+ExpiresByType image/webp "access plus 7 days"
+ExpiresByType image/png "access plus 7 days"
+ExpiresByType image/jpeg "access plus 7 days"

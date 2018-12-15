@@ -19,38 +19,52 @@ var concat = require('gulp-concat');
 var includejs = require('gulp-include');
 var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-htmlmin');
+var modifyCssUrls = require('gulp-modify-css-urls');
 
-var ftpcred = require("./.ftpcred.json");
-var gutil = require( 'gulp-util' );
-var ftp = require( 'vinyl-ftp' );
+gulp.task('modifyUrls', function () {
+  return gulp.src('build/css/style.css')
+    .pipe(modifyCssUrls({
+      modify: function (url, filePath) {
+        return url.replace("..","");
+      },
+      //prepend: 'https://273128.selcdn.ru/paradoxprava.ru'
+      prepend: ''
+      //,append: '?cache-buster'
+    }))
+    .pipe(csso())
+    .pipe(rename('style.min.img.css'))
+    .pipe(gulp.dest('wp-content/themes/paradoxprava/assets/css'));
+});
 
-gulp.task( 'publish', function () {
-  var conn = ftp.create( {
-    host: 'enut.ru',
-    user: ftpcred.login,
-    password: ftpcred.password,
-    parallel: 1,
-    log: gutil.log,
-  } );
-
-    var globs = [
-        'build/img/**',
-        'build/css/**',
-        'build/js/**',
-        'build/fonts/**',
-        'build/index.html'
-    ];
-
-    // using base = '.' will transfer everything to /public_html correctly
-    // turn off buffering in gulp.src for best performance
-
-    return gulp.src( globs, { base: '.', buffer: false } )
-        .pipe( conn.newer( '/www/enut.ru/paradoxprava' ) ) // only upload newer files
-        .pipe( conn.dest( '/www/enut.ru/paradoxprava' ) );
-
-} );
-
-
+// var ftpcred = require("./.ftpcred.json");
+// var gutil = require( 'gulp-util' );
+// var ftp = require( 'vinyl-ftp' );
+//
+// gulp.task( 'publish', function () {
+//   var conn = ftp.create( {
+//     host: 'enut.ru',
+//     user: ftpcred.login,
+//     password: ftpcred.password,
+//     parallel: 1,
+//     log: gutil.log,
+//   } );
+//
+//     var globs = [
+//         'build/img/**',
+//         'build/css/**',
+//         'build/js/**',
+//         'build/fonts/**',
+//         'build/index.html'
+//     ];
+//
+//     // using base = '.' will transfer everything to /public_html correctly
+//     // turn off buffering in gulp.src for best performance
+//
+//     return gulp.src( globs, { base: '.', buffer: false } )
+//         .pipe( conn.newer( '/www/enut.ru/paradoxprava' ) ) // only upload newer files
+//         .pipe( conn.dest( '/www/enut.ru/paradoxprava' ) );
+//
+// } );
 
 gulp.task('minifyhtml', function () {
   return gulp.src('build/*.html')
@@ -90,7 +104,7 @@ gulp.task('images', function () {
 
 gulp.task('webp', function () {
   return gulp.src('source/img/**/*.{png,jpg}')
-    .pipe(webp({quality: 85}))
+    .pipe(webp({quality: 80}))
     .pipe(gulp.dest('source/img'));
 });
 
@@ -182,6 +196,6 @@ gulp.task('refresh', function (done) {
 });
 
 gulp.task('img', gulp.series('webp', 'images'));
-gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'js', 'html', 'minifyhtml', 'clean_wp', 'copy_wp'));
-gulp.task('deploy', gulp.series('build', 'publish'));
+gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'js', 'html', 'minifyhtml', 'clean_wp', 'copy_wp', 'modifyUrls'));
+//gulp.task('deploy', gulp.series('build', 'publish'));
 gulp.task('start', gulp.series('build', 'server'));

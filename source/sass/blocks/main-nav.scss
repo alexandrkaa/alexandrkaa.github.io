@@ -1,7 +1,6 @@
 .main-nav {
   background-color: transparent;
   background-image: linear-gradient(to right, transparent, transparent 30%, $cl-white 30%, $cl-white);
-  //background-image: linear-gradient(to right, transparent, transparent 30%, $cl-red 30%, $cl-red);
 }
 
 .main-nav__toggler {
@@ -15,7 +14,6 @@
   padding: 0;
   margin-right: 20px;
   background-color: transparent;
-  //background-image: linear-gradient(to bottom, $cl-grey, $cl-grey 10px, transparent 10px, transparent 20px, $cl-grey 20px, $cl-grey 30px, transparent 30px, transparent 40px, $cl-grey 40px, $cl-grey);
   background-image: linear-gradient(to bottom, transparent, transparent 15px, $cl-grey 15px, $cl-grey 19px, transparent 19px, transparent 23px, $cl-grey 23px, $cl-grey 27px, transparent 27px, transparent 31px, $cl-grey 31px, $cl-grey 35px, transparent 35px, transparent);
   position: relative;
 
@@ -58,7 +56,6 @@
   }
 
   .main-nav--opened {
-    //background: none;
     background-color: $cl-white;
   }
 

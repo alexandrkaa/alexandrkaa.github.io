@@ -1,7 +1,6 @@
 .menu-list {
   @include list-reset;
   background-color: $cl-white;
-  //background-color: $cl-red;
   margin: 0 auto; // in list reset margin is disabled
 }
 
@@ -12,18 +11,14 @@
   align-items: center;
   padding: 0 35px;
   background-color: $cl-white;
-  //background-color: $cl-red;
 
   &--active {
-    //background-color: $cl-white;
     background-color: $cl-red;
 
     .menu-list__link {
-      //color: $cl-red;
       color: $cl-white;
 
       &:hover {
-        //color: transparentize($cl-red, 0.3);
         color: $cl-yellow;
       }
 
@@ -36,7 +31,6 @@
 }
 
 .menu-list__link {
-  //color: $cl-white;
   color: $cl-red;
   text-decoration: underline;
 

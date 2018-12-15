@@ -12,17 +12,10 @@
   color: $cl-red;
   text-align: center;
   flex-basis: 100%;
-  //box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  //transition: all 0.3s ease-in-out;
   padding: 15px;
   margin-bottom: 15px;
   margin-top: 0;
-
-  // &:hover {
-  //   box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.2);
-  //   transition: all 0.3s ease-in-out;
-  // }
 }
 
 .contacts-page__info {
@@ -31,15 +24,8 @@
   line-height: 26px;
   color: $cl-blue-footer;
   flex-basis: 100%;
-  //box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  //transition: all 0.3s ease-in-out;
   padding: 15px;
-
-  // &:hover {
-  //   box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.2);
-  //   transition: all 0.3s ease-in-out;
-  // }
 }
 
 .contacts-page__time,
@@ -53,6 +39,8 @@
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
+  font-size: 20px;
+  padding: 15px;
 
   &:hover {
     box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.2);

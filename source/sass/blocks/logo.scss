@@ -1,19 +1,4 @@
 @keyframes rot {
-  // 25% {
-  //   transform: rotate(-15deg);
-  // }
-  //
-  // 50% {
-  //   transform: rotate(0deg);
-  // }
-  //
-  // 75% {
-  //   transform: rotate(15deg);
-  // }
-  //
-  // 100% {
-  //   transform: rotate(0deg);
-  // }
   0% {
     transform: rotate(0deg);
   }
@@ -24,11 +9,9 @@
 }
 
 .logo {
-  //width: 350px;
   height: 200px;
   display: flex;
   justify-content: center;
-  //position: relative;
 }
 
 .logo__wrapper {

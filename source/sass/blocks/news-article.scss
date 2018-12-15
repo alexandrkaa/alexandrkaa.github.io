@@ -5,10 +5,14 @@
 }
 
 @media (max-width: $desktop-width) {
-  max-width: $tablet-width;
+  .news-article {
+    max-width: $tablet-width;
+  }
 }
 
 @media (max-width: $tablet-width) {
-  max-width: none;
-  margin: 0;
+  .news-article {
+    max-width: none;
+    margin: 0;
+  }
 }
