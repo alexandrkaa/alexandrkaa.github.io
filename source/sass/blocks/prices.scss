@@ -28,9 +28,44 @@
   margin-top: 20px;
 }
 
+.prices__table {
+  //border: 1px solid $cl-blue-dark;
+  border-collapse: collapse;
+  max-width: $desktop-width;
+  margin: 0 auto;
+
+  td {
+    box-sizing: border-box;
+    padding: 15px;
+    //border: 1px solid $cl-blue-dark;
+
+    &:first-child {
+      font-weight: bold;
+    }
+
+    &:last-child {
+      text-decoration: underline;
+      text-decoration-style: double;
+      font-style: italic;
+    }
+  }
+
+  tr {
+    box-sizing: border-box;
+
+    &:not(:last-child):hover {
+      box-shadow: inset 0 -2px 0 0 $cl-red;
+    }
+  }
+}
+
 @media (max-width: $desktop-width) {
   .prices__list {
     max-width: $tablet-width - (($tablet-width/12)*3) + 30px;
+  }
+
+  .prices__table {
+    max-width: $tablet-width;
   }
 }
 
@@ -44,5 +79,22 @@
     margin: 0 15px;
     box-sizing: border-box;
     margin-bottom: 10px;
+  }
+
+  .prices__table {
+    tr {
+      display: flex;
+      flex-direction: column;
+
+      &:not(:last-child):hover {
+        box-shadow: none;
+      }
+    }
+
+    td {
+      &:last-child {
+        text-align: right;
+      }
+    }
   }
 }
