@@ -1,0 +1,25 @@
+.single-service {
+  @include list-reset;
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.single-service__item {
+  position: relative;
+  padding-left: 15px;
+
+  &::before {
+    content: "- ";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .single-service {
+    margin: 0;
+    max-width: 100%;
+  }
+}

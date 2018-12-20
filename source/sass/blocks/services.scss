@@ -1,6 +1,10 @@
 .services {
   background-color: $cl-blue;
   background-image: linear-gradient(135deg, $cl-blue, $cl-blue-dark);
+
+  &--page {
+    background: $cl-white;
+  }
 }
 
 .services__wrapper {
@@ -88,6 +92,22 @@
     right: 3px;
     border: 11px solid transparent;
     transition: all ease-in-out 0.7s;
+  }
+
+  &--header {
+    width: 100%;
+    display: block;
+    padding: 15px;
+    padding-left: 80px;
+    margin: 15px auto 15px auto;
+
+    &::before {
+      background-color: $cl-red;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   &--family {

@@ -77,9 +77,15 @@
         </div>
       </section>
     </header>
-    <main class="page-content <? if(is_front_page()) {echo 'page-content--front-page';} ?>">
+    <?
+    $page_object = get_queried_object();
+    $page_id = get_queried_object_id();
+    $parent_id = wp_get_post_parent_id($page_id);
+    $post_meta = get_post_meta($page_id, "service_name");
+    ?>
+    <main class="page-content <? if(is_front_page()) {echo 'page-content--front-page';} ?> <? if($parent_id===9) { echo "services services--page"; }?>">
       <? if(is_front_page()) { ?>
-      <h1 class="page-content__header visually-hidden">Юридическая компания ПарадоксПрава</h1>
+      <h1 class="page-content__header visually-hidden">Юридические услуги Парадокс Права</h1>
       <? } else { ?>
-      <h1 class="page-content__header"><? wp_title(''); ?></h1>
+      <h1 class="page-content__header <? if($parent_id===9) { echo "services__service services__service--".$post_meta[0]." services__service--header"; }?>"><? wp_title(''); ?></h1>
       <? } ?>
