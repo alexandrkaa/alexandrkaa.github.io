@@ -7,6 +7,7 @@
       <? the_content(); ?>
     </article>
     <? endwhile;
+    numeric_posts_nav();
     else :
         _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
     endif;

@@ -23,7 +23,7 @@
       <meta name="google-site-verification" content="RI5Z2BijJXWON4OTDeZfY--wy3iSPUsXdEa0goVqG6o" />
       <?php wp_head(); ?>
   </head>
-  <body>
+  <body class="page">
     <header class="header-main no-webp">
       <div class="header-banner">
         <div class="header-banner__wrapper">

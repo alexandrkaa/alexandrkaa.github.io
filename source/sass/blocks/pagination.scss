@@ -1,0 +1,36 @@
+.pagination {
+  @include list-reset;
+  max-width: $desktop-width;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pagination__item {
+  padding: 5px;
+  a {
+    color: $cl-red;
+    text-decoration: none;
+
+    &:hover {
+      color: lighten($cl-red, 30%);
+    }
+
+    &:focus,
+    &:active {
+      color: invert($cl-red);
+    }
+  }
+
+  &--active {
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .pagination {
+    max-width: 100%;
+  }
+}
