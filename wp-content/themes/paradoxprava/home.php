@@ -8,8 +8,10 @@
     </article>
     <? endwhile;
     numeric_posts_nav();
-    else :
-        _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
-    endif;
+    else : ?>
+      <article class="news-article">
+      <? _e( 'Новостей еще не опубликовано', 'textdomain' ); ?>
+      </article>
+    <? endif;
     //get_sidebar();
     get_footer();

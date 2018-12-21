@@ -21,6 +21,7 @@
       <meta name="theme-color" content="#ffffff">
       <title><?php echo wp_get_document_title(); ?></title>
       <meta name="google-site-verification" content="RI5Z2BijJXWON4OTDeZfY--wy3iSPUsXdEa0goVqG6o" />
+      <meta name="yandex-verification" content="771a679dc701fea3" />
       <?php wp_head(); ?>
   </head>
   <body class="page">
