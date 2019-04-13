@@ -91,3 +91,7 @@ $(document).ready(function() {
     }]
   });
 });
+
+//=require node_modules/quicklink/dist/quicklink.js
+
+quicklink();
